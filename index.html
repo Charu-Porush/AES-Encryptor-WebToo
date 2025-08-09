@@ -5,12 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AES Encryption Web Tool</title>
     <link rel="stylesheet" href="style.css">
+    <!-- CryptoJS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body>
+    <div class="container">
+        <h1>AES Encryption & Decryption Tool</h1>
 
-    <h2>AES Encryption Web Tool</h2>
+        <label for="text">Enter Text:</label>
+        <textarea id="text" placeholder="Type your text here..."></textarea>
+
+        <label for="key">Enter Key:</label>
+        <input type="text" id="key" placeholder="Enter secret key">
+
+        <div class="btn-group">
+            <button onclick="encryptText()">Encrypt</button>
+            <button onclick="decryptText()">Decrypt</button>
+            <button onclick="clearFields()">Clear</button>
+        </div>
+
+        <label for="output">Output:</label>
+        <textarea id="output" readonly></textarea>
+    </div>
 
     <script src="encrypt.js"></script>
 </body>
 </html>
+
 
